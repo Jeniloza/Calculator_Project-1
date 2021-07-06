@@ -21,6 +21,12 @@ class MyTestCase(unittest.TestCase):
             self.assertEqual(self.calculator.add(row['\ufeffValue 1'], row['Value 2']), int(row['Result']))
             self.assertEqual(self.calculator.result, int(row['Result']))
 
+    def test_subtract_method_calculator(self):
+        test_data = CsvReader('/src/subtraction.csv').data
+        pprint(test_data)
+        for row in test_data:
+            self.assertEqual(self.calculator.subtract(row['\ufeffValue 1'], row['Value 2']), int(row['Result']))
+            self.assertEqual(self.calculator.result, int(row['Result']))
 
 if __name__ == '__main__':
     unittest.main()
