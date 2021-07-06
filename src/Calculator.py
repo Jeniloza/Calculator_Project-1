@@ -22,6 +22,9 @@ def sqrnum(a):
     b = int(a) ** 2
     return b
 
+def sqrroot(a):
+    b = int(a) ** 0.5
+    return b
 
 class Calculator:
     result = 0
@@ -48,6 +51,11 @@ class Calculator:
     def sqrnum(self, a):
         self.result = sqrnum(a)
         return self.result
+
+    def sqrroot(self, a):
+        self.result = sqrroot(a)
+        return self.result
+
 
 
 

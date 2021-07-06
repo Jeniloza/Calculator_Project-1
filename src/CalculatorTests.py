@@ -49,5 +49,12 @@ class MyTestCase(unittest.TestCase):
             self.assertEqual(self.calculator.sqrnum(row['\ufeffValue 1']), int(row['Result']))
             self.assertEqual(self.calculator.result, int(row['Result']))
 
+    def test_sqrroot_method_calculator(self):
+        test_data = CsvReader('/src/sqrroot.csv').data
+        pprint(test_data)
+        for row in test_data:
+            self.assertEqual(self.calculator.sqrroot(row['\ufeffValue 1']), int(row['Result']))
+            self.assertEqual(self.calculator.result, int(row['Result']))
+
 if __name__ == '__main__':
     unittest.main()
