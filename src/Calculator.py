@@ -18,6 +18,9 @@ def division(a,b):
     c = int(b) / int(a)
     return c
 
+def sqrnum(a):
+    b = int(a) ** 2
+    return b
 
 
 class Calculator:
@@ -41,4 +44,10 @@ class Calculator:
     def division(self, a, b):
         self.result = division(a, b)
         return self.result
+
+    def sqrnum(self, a):
+        self.result = sqrnum(a)
+        return self.result
+
+
 
