@@ -14,6 +14,11 @@ def multiplication(a,b):
     c = int(a) * int(b)
     return c
 
+def division(a,b):
+    c = int(b) / int(a)
+    return c
+
+
 
 class Calculator:
     result = 0
@@ -33,4 +38,7 @@ class Calculator:
         self.result = multiplication(a, b)
         return self.result
 
+    def division(self, a, b):
+        self.result = division(a, b)
+        return self.result
 
